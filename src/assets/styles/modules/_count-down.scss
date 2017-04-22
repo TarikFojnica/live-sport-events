@@ -4,14 +4,32 @@
 		padding: 15px;
 		border: 1px solid rgba($color-blue-light-1, .2);
 		color: whitesmoke;
-		padding-left: 120px;
-		height: 188px;
+		height: 197px;
+		text-align: center;
 
 		img {
-			position: absolute;
-			top: 15px;
-			left: 15px;
 			width: 80px;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		span {
+			&.item {
+				font-size: 1.5em;
+				padding: 10px;
+				border: 1px solid rgba(255,255,255,.1);
+				display: inline-block;
+				width: 33.333%;
+
+				&.no-right-border {
+					border-right: none;
+				}
+
+				&.no-left-border {
+					border-left: none;
+				}
+			}
 		}
 	}
 }

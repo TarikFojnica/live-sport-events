@@ -10,13 +10,16 @@ class CountDown extends React.Component {
 			console.log('expired callback')
 		}
 
-		const OPTIONS = { endDate: '05/20/2017 10:55 AM', prefix: '', cb}
+		const OPTIONS = { endDate: '05/20/2017 10:55 AM', prefix: '', cb};
 
 		return (
 			<div className="module count-down with-transparent-background">
 				<img src={sandClock} alt="Count Down"/>
-				<div className="clock">
-					<Countdown options={OPTIONS} />
+				<br/>
+				<div className="values">
+					<span className="item days no-right-border">25 <small>days</small></span>
+					<span className="item hours no-right-border">15 <small>hours</small></span>
+					<span className="item seconds">59 <small>seconds</small></span>
 				</div>
 			</div>
 		);

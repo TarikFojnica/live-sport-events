@@ -6463,6 +6463,10 @@ header .navbar.navbar-default {
       margin-right: 10px; }
   header .navbar.navbar-default .navbar-nav li a {
     color: whitesmoke; }
+    header .navbar.navbar-default .navbar-nav li a img {
+      width: 10px;
+      margin-top: -3px;
+      margin-right: 5px; }
     header .navbar.navbar-default .navbar-nav li a:hover {
       color: #5BC0DE; }
 
@@ -6504,18 +6508,46 @@ body {
         top: 0;
         left: 0;
         width: 21px; }
+  .page.events .intro p.desc {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px; }
 
 .module.count-down {
   position: relative;
   padding: 15px;
   border: 1px solid rgba(91, 192, 222, 0.2);
   color: whitesmoke;
-  padding-left: 120px;
-  height: 188px; }
+  height: 197px;
+  text-align: center; }
   .module.count-down img {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 80px; }
+    width: 80px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+  .module.count-down span.item {
+    font-size: 1.5em;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    width: 33.333%; }
+    .module.count-down span.item.no-right-border {
+      border-right: none; }
+    .module.count-down span.item.no-left-border {
+      border-left: none; }
+
+table.table {
+  border: 1px solid rgba(91, 192, 222, 0.2);
+  color: whitesmoke;
+  margin-top: 15px; }
+  table.table tr th {
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid #5BC0DE; }
+  table.table tr td {
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    table.table tr td img {
+      width: 16px; }
 
 /*# sourceMappingURL=main.css.map */
