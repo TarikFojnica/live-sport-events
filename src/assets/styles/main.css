@@ -6444,7 +6444,7 @@ img {
   /* stops bg color from leaking outside the border: */ }
 
 .with-transparent-background {
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 header .navbar.navbar-default {
   background: none;
@@ -6475,7 +6475,6 @@ body {
   font-family: 'Raleway', sans-serif; }
 
 .app-container {
-  background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   min-height: 100vh; }
 
@@ -6505,5 +6504,18 @@ body {
         top: 0;
         left: 0;
         width: 21px; }
+
+.module.count-down {
+  position: relative;
+  padding: 15px;
+  border: 1px solid rgba(91, 192, 222, 0.2);
+  color: whitesmoke;
+  padding-left: 120px;
+  height: 188px; }
+  .module.count-down img {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 80px; }
 
 /*# sourceMappingURL=main.css.map */

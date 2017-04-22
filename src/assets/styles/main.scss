@@ -17,9 +17,10 @@ body {
 }
 
 .app-container {
-	background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
 	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 	min-height: 100vh;
 }
 
 @import "pages/events";
+
+@import "modules/count-down";

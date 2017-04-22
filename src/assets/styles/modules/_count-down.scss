@@ -1,0 +1,17 @@
+.module {
+	&.count-down {
+		position: relative;
+		padding: 15px;
+		border: 1px solid rgba($color-blue-light-1, .2);
+		color: whitesmoke;
+		padding-left: 120px;
+		height: 188px;
+
+		img {
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			width: 80px;
+		}
+	}
+}
