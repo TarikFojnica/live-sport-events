@@ -4,6 +4,7 @@
 @import "variables";
 @import "mixins";
 @import "helpers";
+@import "modules/header";
 
 body {
 	background: #E9EAF4 url(../images/bg.jpg) center center fixed;
@@ -18,6 +19,7 @@ body {
 .app-container {
 	background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
 	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+	min-height: 100vh;
 }
 
-@import "modules/header";
+@import "pages/events";

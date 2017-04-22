@@ -281,3 +281,7 @@ img {
 .no-border-radius {
 	@include border-radius(0);
 }
+
+.with-transparent-background {
+	background-color: rgba(0,0,0,.2);
+}

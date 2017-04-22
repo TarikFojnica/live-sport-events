@@ -21,7 +21,10 @@ header {
 				li {
 					a {
 						color: whitesmoke;
-						font-weight: 600;
+						
+						&:hover {
+							color: $color-blue-light-1;
+						}
 					}
 				}
 			}
