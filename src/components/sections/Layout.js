@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Header from '../sections/Header'
 
-class Layout extends React.Component {
+class Layout extends Component {
 
 	render() {
 		return (
 			<div className="app-container">
+				<Header/>
+
 				<div className="container">
 					<div className="page">
 						{this.props.children}

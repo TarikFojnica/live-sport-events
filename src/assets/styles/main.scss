@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
+
 @import "dependencies/bootstrap";
+@import "variables";
+@import "mixins";
+@import "helpers";
 
-.body {
+body {
+	background: #E9EAF4 url(../images/bg.jpg) center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 
-
-
-	.app-container {
-		background-color: red;
-	}
+	font-family: 'Raleway', sans-serif;
 }
+
+.app-container {
+	background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+@import "modules/header";
