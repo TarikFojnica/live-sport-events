@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Intro from './Intro';
 import CountDown from '../../common/CountDown'
+import Table from './Table'
 
 class Event extends React.Component {
 
@@ -16,6 +17,8 @@ class Event extends React.Component {
 						<CountDown/>
 					</div>
 				</div>
+
+				<Table/>
 			</div>
 		);
 	}
