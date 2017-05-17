@@ -6603,9 +6603,9 @@ table.table {
     padding-right: 5px;
     text-align: center; }
     .dynamic-element .timeline .gate .inner {
-      height: 15px; }
+      height: 25px; }
     .dynamic-element .timeline .gate .time {
-      font-family: Calibri;
+      font-family: 'Share Tech Mono', monospace;
       color: whitesmoke;
       text-align: center;
       margin-top: 10px;
