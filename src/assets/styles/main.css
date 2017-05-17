@@ -6550,4 +6550,43 @@ table.table {
     table.table tr td img {
       width: 16px; }
 
+.live-navigation nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  .live-navigation nav ul li {
+    display: block;
+    font-size: 1.3em;
+    width: 20%;
+    float: right;
+    text-align: center; }
+    .live-navigation nav ul li.active {
+      z-index: 999; }
+      .live-navigation nav ul li.active a {
+        background-color: #fff;
+        color: #215682;
+        z-index: 999; }
+    .live-navigation nav ul li a {
+      -webkit-border-top-right-radius: 50px;
+      border-top-right-radius: 50px;
+      -webkit-border-top-left-radius: 50px;
+      border-top-left-radius: 50px;
+      background-clip: padding-box;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      color: rgba(219, 219, 219, 0.78);
+      padding: 15px 20px;
+      display: block;
+      -o-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      font-weight: 700; }
+      .live-navigation nav ul li a img {
+        width: 1.2em;
+        margin-top: -2px; }
+      .live-navigation nav ul li a:hover {
+        background-color: #fff;
+        color: #215682; }
+
 /*# sourceMappingURL=main.css.map */

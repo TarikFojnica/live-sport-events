@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Navigation from './Navigation'
 
 class Live extends React.Component {
 
 	render() {
 		return (
-			<div className="page events">
+			<div className="page live">
+				<Navigation/>
+
 				<div className="row">
 					<div className="col-md-7">
 						agc

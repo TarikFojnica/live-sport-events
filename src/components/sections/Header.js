@@ -12,10 +12,9 @@ class Header extends Component  {
 							<a className="navbar-brand" href="#"><img src={logoImg} alt=""/>EYOF 2019</a>
 						</div>
 						<ul className="nav navbar-nav navbar-right">
-							<li><a href="#">Home</a></li>
+							<li className="live"><a href="#"><img src={liveIcon} alt="Live"/>Live</a></li>
 							<li><a href="#">Teams</a></li>
 							<li><a href="#">Events</a></li>
-							<li className="live"><a href="#"><img src={liveIcon} alt="Live"/>Live</a></li>
 						</ul>
 					</div>
 				</nav>
