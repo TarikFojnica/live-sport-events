@@ -69,7 +69,7 @@ class TimeElapsed extends React.Component {
 	render() {
 		const units = this.getUnits();
 		return (
-			<div id={this.props.id}>
+			<div className="stopwatch" id={this.props.id}>
 				<span>{leftPad(2, units.min)}:</span>
 				<span>{leftPad(2, units.sec)}.</span>
 				<span>{units.msec}</span>

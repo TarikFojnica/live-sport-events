@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600");
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -6615,10 +6616,18 @@ table.table {
       background-color: white; }
     .dynamic-element .timeline .gate.active .inner {
       background-color: #5BC0DE;
-      animation: blinker 0.5s linear infinite; }
+      animation: blinker 1s linear infinite; }
 
 @keyframes blinker {
   50% {
     opacity: 0; } }
+.stopwatch {
+  color: #5BC0DE;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px 10px; }
+  .stopwatch span {
+    font-size: 2.7em; }
 
 /*# sourceMappingURL=main.css.map */
