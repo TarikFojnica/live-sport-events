@@ -1,0 +1,56 @@
+.dynamic-element {
+	border: 1px solid white;
+	padding: 20px 10px;
+	background-color: rgba(0,0,0,.1);
+
+	.current-player {
+		h4 {
+			font-size: 1.5em;
+			color: whitesmoke;
+		}
+	}
+
+	.timeline {
+		.gate {
+			width: 20%;
+			float: left;
+			padding-right: 5px;
+			text-align: center;
+
+			.inner {
+				height: 15px;
+			}
+			
+			.time {
+				font-family: Calibri;
+				color: whitesmoke;
+				text-align: center;
+				margin-top: 10px;
+				display: block;
+			}
+			
+			&.waiting {
+				.inner {
+					background-color: rgba(255,255,255,.2);
+				}
+			}
+
+			&.finished {
+				.inner {
+					background-color: white;
+				}
+			}
+
+			&.active {
+				.inner {
+					background-color: $color-blue-light-1;
+					animation: blinker 0.5s linear infinite;
+				}
+			}
+		}
+	}
+}
+
+@keyframes blinker {
+	50% { opacity: 0; }
+}

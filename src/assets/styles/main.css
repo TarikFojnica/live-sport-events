@@ -6589,4 +6589,36 @@ table.table {
         background-color: #fff;
         color: #215682; }
 
+.dynamic-element {
+  border: 1px solid white;
+  padding: 20px 10px;
+  background-color: rgba(0, 0, 0, 0.1); }
+  .dynamic-element .current-player h4 {
+    font-size: 1.5em;
+    color: whitesmoke; }
+  .dynamic-element .timeline .gate {
+    width: 20%;
+    float: left;
+    padding-right: 5px;
+    text-align: center; }
+    .dynamic-element .timeline .gate .inner {
+      height: 15px; }
+    .dynamic-element .timeline .gate .time {
+      font-family: Calibri;
+      color: whitesmoke;
+      text-align: center;
+      margin-top: 10px;
+      display: block; }
+    .dynamic-element .timeline .gate.waiting .inner {
+      background-color: rgba(255, 255, 255, 0.2); }
+    .dynamic-element .timeline .gate.finished .inner {
+      background-color: white; }
+    .dynamic-element .timeline .gate.active .inner {
+      background-color: #5BC0DE;
+      animation: blinker 0.5s linear infinite; }
+
+@keyframes blinker {
+  50% {
+    opacity: 0; } }
+
 /*# sourceMappingURL=main.css.map */
