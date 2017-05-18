@@ -6599,7 +6599,7 @@ table.table {
     font-size: .85em;
     color: white;
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: 10px; }
     .dynamic-element .live-note img {
       width: 1em; }
