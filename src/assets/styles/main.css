@@ -6645,4 +6645,44 @@ table.table {
     text-transform: uppercase;
     color: #5BC0DE; }
 
+.events-list-element {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  -o-transition: 1s;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s; }
+  .events-list-element:hover {
+    background-color: rgba(0, 0, 0, 0.3); }
+    .events-list-element:hover a {
+      text-decoration: none !important; }
+  .events-list-element .btn {
+    display: block;
+    background-color: whitesmoke;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    margin-top: 5px;
+    font-weight: 700; }
+    .events-list-element .btn img {
+      width: 1em;
+      margin-top: -3px; }
+  .events-list-element h2 {
+    margin-top: 0;
+    color: whitesmoke; }
+  .events-list-element p {
+    color: whitesmoke;
+    font-size: 1.3em;
+    padding: 5px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    .events-list-element p:last-child {
+      border-bottom: none; }
+    .events-list-element p img {
+      width: 1em;
+      margin-top: -2px;
+      margin-right: 5px; }
+
 /*# sourceMappingURL=main.css.map */

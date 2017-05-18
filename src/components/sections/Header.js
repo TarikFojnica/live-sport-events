@@ -17,7 +17,7 @@ class Header extends Component  {
 								<Link to="/"><img src={liveIcon} alt="Live"/>Live</Link>
 							</li>
 							<li>
-								<Link to="/events/1">Events</Link>
+								<Link to="/events/">Events</Link>
 							</li>
 
 							<li>
