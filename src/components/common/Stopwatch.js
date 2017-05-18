@@ -37,8 +37,10 @@ class Stopwatch extends React.Component {
 		this.setState(this.initialState);
 	}
 	startTimer() {
-		this.startTime = Date.now();
-		this.timer = setInterval(this.update, 10);
+		if (this.refs.stopwatchRef) {
+			this.startTime = Date.now();
+			this.timer = setInterval(this.update, 10);
+		}
 	}
 	update() {
 		const delta = Date.now() - this.startTime;
@@ -50,10 +52,15 @@ class Stopwatch extends React.Component {
 		this.startTimer();
 	}
 
+	componentWillUnmount() {
+		clearInterval(this.timer);
+	}
+
+
 	render() {
 		const {isRunning, lapTimes, timeElapsed} = this.state;
 		return (
-			<div>
+			<div ref="stopwatchRef">
 				<TimeElapsed id="timer" timeElapsed={timeElapsed} />
 			</div>
 		);

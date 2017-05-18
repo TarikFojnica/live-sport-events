@@ -7,7 +7,8 @@ import Live from './components/pages/live/Live';
 const routes = (
 	<Route path="/" component={Layout}>
 		<IndexRoute component={Live}/>
-		<Route path="event/:id" component={Event}/>
+		<Route path="events/:id" component={Event}/>
+		<Route path="/" component={Event}/>
 	</Route>
 );
 
