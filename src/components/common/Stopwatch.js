@@ -22,6 +22,7 @@ class Stopwatch extends React.Component {
 			timeElapsed: 0,
 		};
 	}
+
 	toggle() {
 		this.setState({isRunning: !this.state.isRunning}, () => {
 			this.state.isRunning ? this.startTimer() : clearInterval(this.timer)
@@ -44,14 +45,16 @@ class Stopwatch extends React.Component {
 		this.setState({timeElapsed: this.state.timeElapsed + delta});
 		this.startTime = Date.now();
 	}
+
+	componentDidMount() {
+		this.startTimer();
+	}
+
 	render() {
 		const {isRunning, lapTimes, timeElapsed} = this.state;
 		return (
 			<div>
 				<TimeElapsed id="timer" timeElapsed={timeElapsed} />
-				<button onClick={this.toggle}>
-					{isRunning ? 'Stop' : 'Start'}
-				</button>
 			</div>
 		);
 	}

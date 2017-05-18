@@ -14,8 +14,8 @@ class Dynamic extends Component  {
 						</div>
 
 						<div className="timeline">
-							<div className="gate gate-1 finished"><div className="inner"></div><span className="time">00:05:46</span></div>
-							<div className="gate gate-2 finished"><div className="inner"></div><span className="time">00:05:46</span></div>
+							<div className="gate gate-1 finished"><div className="inner"></div><span className="time">00:00:19</span></div>
+							<div className="gate gate-2 finished"><div className="inner"></div><span className="time">00:00:23</span></div>
 							<div className="gate gate-3 active"><div className="inner"></div></div>
 							<div className="gate gate-4 waiting"><div className="inner"></div></div>
 							<div className="gate gate-5 waiting"><div className="inner"></div></div>
