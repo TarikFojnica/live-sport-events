@@ -6,7 +6,7 @@ class Dynamic extends Component  {
 	render() {
 		return (
 			<div className="dynamic-element">
-				<span className="live-note"><img src={liveIcon} alt="Live Icon"/> Live</span>
+				<span className="live-note"><img src={liveIcon} alt="Live Icon"/> Live Event</span>
 				<div className="row">
 					<div className="col-md-8">
 						<div className="current-player">

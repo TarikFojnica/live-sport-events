@@ -6600,9 +6600,7 @@ table.table {
     color: white;
     position: absolute;
     top: 5px;
-    left: 10px;
-    border: 1px solid red;
-    padding: 1px 10px; }
+    left: 10px; }
     .dynamic-element .live-note img {
       width: 1em; }
   .dynamic-element .current-player h4 {
