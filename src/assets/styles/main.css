@@ -6639,4 +6639,10 @@ table.table {
   .stopwatch span {
     font-size: 2.7em; }
 
+.standings-table {
+  margin-top: 20px; }
+  .standings-table h4 {
+    text-transform: uppercase;
+    color: #5BC0DE; }
+
 /*# sourceMappingURL=main.css.map */
