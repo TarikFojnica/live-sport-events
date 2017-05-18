@@ -6591,9 +6591,20 @@ table.table {
         color: #215682; }
 
 .dynamic-element {
-  border: 1px solid white;
-  padding: 20px 10px;
-  background-color: rgba(0, 0, 0, 0.1); }
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  padding: 25px 10px 20px 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative; }
+  .dynamic-element .live-note {
+    font-size: .85em;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    border: 1px solid red;
+    padding: 1px 10px; }
+    .dynamic-element .live-note img {
+      width: 1em; }
   .dynamic-element .current-player h4 {
     font-size: 1.5em;
     color: whitesmoke; }

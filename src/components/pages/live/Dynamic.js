@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import Stopwatch from '../../common/Stopwatch'
+import Stopwatch from '../../common/Stopwatch';
+import liveIcon from '../../../assets/images/circle.svg';
 
 class Dynamic extends Component  {
 	render() {
 		return (
 			<div className="dynamic-element">
+				<span className="live-note"><img src={liveIcon} alt="Live Icon"/> Live</span>
 				<div className="row">
 					<div className="col-md-8">
 						<div className="current-player">
