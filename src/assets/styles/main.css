@@ -6652,18 +6652,21 @@ table.table {
   -ms-transition: 1s;
   -moz-transition: 1s;
   -webkit-transition: 1s;
-  transition: 1s; }
+  transition: 1s;
+  margin-bottom: 15px; }
   .events-list-element:hover {
-    background-color: rgba(0, 0, 0, 0.3); }
+    background-color: rgba(0, 0, 0, 0.5); }
     .events-list-element:hover a {
       text-decoration: none !important; }
   .events-list-element .btn {
     display: block;
-    background-color: whitesmoke;
+    border: 1px solid #a3a3a3;
+    background-color: rgba(255, 255, 255, 0.1);
     -webkit-border-radius: 2px;
     border-radius: 2px;
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */
+    color: whitesmoke;
     margin-top: 5px;
     font-weight: 700; }
     .events-list-element .btn img {
