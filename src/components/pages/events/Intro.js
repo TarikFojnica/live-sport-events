@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import slalom from '../../../assets/images/slalom.svg';
 import place from '../../../assets/images/placeholder-on-map-paper-in-perspective.svg';

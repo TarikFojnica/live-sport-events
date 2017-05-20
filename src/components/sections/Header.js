@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import {Link} from 'react-router'
 import logoImg from '../../assets/images/mountain-range.svg'

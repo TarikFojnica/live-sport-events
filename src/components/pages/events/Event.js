@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import Intro from './Intro';
 import CountDown from '../../common/CountDown'

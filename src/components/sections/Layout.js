@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import Header from '../sections/Header'
 

@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import Stopwatch from '../../common/Stopwatch';
 import liveIcon from '../../../assets/images/circle.svg';

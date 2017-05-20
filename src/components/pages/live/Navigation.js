@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import Skiman from '../../../assets/images/ski-stick-man.svg'
 

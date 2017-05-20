@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import Navigation from './Navigation';
 import Dynamic from './Dynamic';

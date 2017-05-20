@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import flagAustria from '../../../assets/images/flags/austria.svg'
 import flagCanada from '../../../assets/images/flags/canada.svg'

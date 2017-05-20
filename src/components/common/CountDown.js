@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import Countdown from 'react-count-down'
 import sandClock from '../../assets/images/sand-clock.svg'

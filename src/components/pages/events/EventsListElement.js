@@ -1,3 +1,5 @@
+// Tarik Fojnica
+
 import React, { Component } from 'react';
 import {Link} from 'react-router';
 import LinkSymbol from '../../../assets/images/link-symbol.svg';
