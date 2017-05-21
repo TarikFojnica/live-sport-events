@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import au from '../../../assets/images/flags/austria.svg'
 
 class EventsListElement extends React.Component {
 	render() {
@@ -6,12 +7,12 @@ class EventsListElement extends React.Component {
 			<div className="col-md-4">
 				<div className="teams-list-element">
 					<div className="header">
-						<h2>Bosnia and Herzegovina</h2>
-						<img src="http://placehold.it/32x32" alt="" className="flag"/>
+						<h2>{this.props.country}</h2>
+						<img src={this.props.flag} alt="" className="au"/>
 					</div>
-					<ul className="memebers">
+					<ul className="members">
 						<li>Members:</li>
-						<li>23</li>
+						<li>{this.props.members}</li>
 					</ul>
 				</div>
 			</div>

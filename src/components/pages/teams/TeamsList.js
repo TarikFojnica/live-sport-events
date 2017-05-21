@@ -8,12 +8,7 @@ class TeamsList extends React.Component {
 	render() {
 		return (
 			<div className="page teams-list">
-				<TeamsListElement/>
-				<TeamsListElement/>
-				<TeamsListElement/>
-				<TeamsListElement/>
-				<TeamsListElement/>
-				<TeamsListElement/>
+				<TeamsListElement country="Austria" flag="au" members="100"/>
 			</div>
 		);
 	}

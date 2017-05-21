@@ -6702,6 +6702,14 @@ table.table {
     margin-top: 0;
     color: whitesmoke;
     font-size: 1.3em; }
+  .teams-list-element .header {
+    position: relative;
+    padding-right: 30px; }
+    .teams-list-element .header img {
+      position: absolute;
+      top: -5px;
+      right: 0;
+      width: 24px; }
   .teams-list-element p {
     color: whitesmoke;
     font-size: 1.3em;

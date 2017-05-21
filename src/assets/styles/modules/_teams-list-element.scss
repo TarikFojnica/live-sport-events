@@ -18,6 +18,18 @@
 		font-size: 1.3em;
 	}
 
+	.header {
+		position: relative;
+		padding-right: 30px;
+
+		img {
+			position: absolute;
+			top: -5px;
+			right: 0;
+			width: 24px;
+		}
+	}
+
 	p {
 		color: whitesmoke;
 		font-size: 1.3em;
