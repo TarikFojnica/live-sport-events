@@ -30,10 +30,12 @@ class EventsList extends React.Component {
 	}
 
 	render() {
+		let dates = [];
 		let  allItems = this.state.data.map((result, id) => {
-			let updatedResult = moment(result.date);
+
+			dates[id] = moment(result.date);
 			return (
-				<EventsListElement key={id} title={result.skiingType} place="Ne radi" date={updatedResult("dddd, MMMM Do YYYY, h:mm")} time={result.startTime}/>
+				<EventsListElement key={id} title={result.skiingType} place="Ne radi" date={dates[id].format("dddd, MMMM Do YYYY")} time={result.startTime}/>
 			)
 		});
 
