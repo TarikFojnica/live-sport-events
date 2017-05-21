@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import au from '../../../assets/images/flags/austria.svg'
+import dataFlags from '../../../data'
 
 class EventsListElement extends React.Component {
 	render() {
@@ -8,11 +8,11 @@ class EventsListElement extends React.Component {
 				<div className="teams-list-element">
 					<div className="header">
 						<h2>{this.props.country}</h2>
-						<img src={this.props.flag} alt="" className="au"/>
+						<img src={dataFlags[this.props.flag]} alt="" className="au"/>
 					</div>
 					<ul className="members">
-						<li>Members:</li>
-						<li>{this.props.members}</li>
+						<li className="key">Members:</li>
+						<li className="value">{this.props.members}</li>
 					</ul>
 				</div>
 			</div>

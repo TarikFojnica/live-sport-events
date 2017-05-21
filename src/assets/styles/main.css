@@ -6707,20 +6707,20 @@ table.table {
     padding-right: 30px; }
     .teams-list-element .header img {
       position: absolute;
-      top: -5px;
+      top: 0;
       right: 0;
-      width: 24px; }
-  .teams-list-element p {
-    color: whitesmoke;
-    font-size: 1.3em;
-    padding: 5px 0;
-    margin-bottom: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-    .teams-list-element p:last-child {
-      border-bottom: none; }
-    .teams-list-element p img {
-      width: 1em;
-      margin-top: -2px;
-      margin-right: 5px; }
+      width: 32px; }
+  .teams-list-element ul {
+    padding: 0;
+    margin: 0; }
+    .teams-list-element ul li {
+      display: inline-block;
+      width: 50%;
+      font-size: 1.2em; }
+      .teams-list-element ul li.key {
+        color: white; }
+      .teams-list-element ul li.value {
+        color: #66e0ff;
+        font-weight: 700; }
 
 /*# sourceMappingURL=main.css.map */
