@@ -4,7 +4,7 @@
 		padding: 15px;
 		border: 1px solid rgba($color-blue-light-1, .2);
 		color: whitesmoke;
-		height: 197px;
+		height: 218px;
 		text-align: center;
 
 		img {
@@ -12,24 +12,16 @@
 			display: block;
 			margin-right: auto;
 			margin-left: auto;
+			margin-bottom: 25px;
 		}
 
 		span {
-			&.item {
-				font-size: 1.5em;
-				padding: 10px;
-				border: 1px solid rgba(255,255,255,.1);
-				display: inline-block;
-				width: 33.333%;
-
-				&.no-right-border {
-					border-right: none;
-				}
-
-				&.no-left-border {
-					border-left: none;
-				}
-			}
+			color: white;
+			text-align: center;
+			font-family: 'Share Tech Mono', monospace;
+			background-color: rgba(0,0,0,.2);
+			padding: 20px 10px;
+			font-size: 1.5em;
 		}
 	}
 }

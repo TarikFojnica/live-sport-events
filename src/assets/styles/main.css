@@ -6480,7 +6480,6 @@ body {
   font-family: 'Raleway', sans-serif; }
 
 .app-container {
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   min-height: 100vh; }
 
 .page.events .intro {
@@ -6518,23 +6517,21 @@ body {
   padding: 15px;
   border: 1px solid rgba(91, 192, 222, 0.2);
   color: whitesmoke;
-  height: 197px;
+  height: 218px;
   text-align: center; }
   .module.count-down img {
     width: 80px;
     display: block;
     margin-right: auto;
-    margin-left: auto; }
-  .module.count-down span.item {
-    font-size: 1.5em;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    display: inline-block;
-    width: 33.333%; }
-    .module.count-down span.item.no-right-border {
-      border-right: none; }
-    .module.count-down span.item.no-left-border {
-      border-left: none; }
+    margin-left: auto;
+    margin-bottom: 25px; }
+  .module.count-down span {
+    color: white;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+    font-size: 1.5em; }
 
 table.table {
   border: 1px solid rgba(91, 192, 222, 0.2);

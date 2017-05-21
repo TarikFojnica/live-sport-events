@@ -11,11 +11,11 @@ class Event extends React.Component {
 		return (
 			<div className="page events">
 				<div className="row">
-					<div className="col-md-7">
+					<div className="col-md-6">
 						<Intro/>
 					</div>
 
-					<div className="col-md-5">
+					<div className="col-md-6">
 						<CountDown/>
 					</div>
 				</div>
