@@ -12,10 +12,10 @@ class EventsListElement extends React.Component {
 		return (
 			<div className="col-md-4">
 				<div className="events-list-element">
-					<h2>Alpine Skiing</h2>
-					<p className="place"><img src={place} alt=""/>Bjelasnica</p>
-					<p className="time"><img src={calendar} alt=""/>22.12.2017</p>
-					<p className="time"><img src={clock} alt=""/>13:00</p>
+					<h2>{this.props.title}</h2>
+					<p className="place"><img src={place} alt=""/>{this.props.place}</p>
+					<p className="time"><img src={calendar} alt=""/>{this.props.time}</p>
+					<p className="time"><img src={clock} alt=""/>{this.props.clock}</p>
 					<Link className="btn" to="/events/1"><img src={LinkSymbol} alt="Link Symbol"/> Details</Link>
 				</div>
 			</div>
