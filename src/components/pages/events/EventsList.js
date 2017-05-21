@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import EventsListElement from './EventsListElement';
+import moment from 'moment'
 
 import axios from 'axios';
 const server = 'http://localhost:58524/api/';
@@ -9,16 +10,19 @@ const server = 'http://localhost:58524/api/';
 class EventsList extends React.Component {
 
 	state = {
-		title: '',
-		place: '',
-		time: '',
-		clock: ''
+		data: []
 	};
 
 	componentDidMount() {
+		let date2 = moment('2017-05-22T00:00:00');
+		console.log(date2.format("dddd, MMMM Do YYYY, h:mm"));
+
+		let _this = this;
 		axios.get(server + 'event')
 			.then(function (response) {
-				console.log(response);
+				_this.setState({
+					data: response.data
+				})
 			})
 			.catch(function (error) {
 				console.log(error);
@@ -26,10 +30,17 @@ class EventsList extends React.Component {
 	}
 
 	render() {
+		let  allItems = this.state.data.map((result, id) => {
+			let updatedResult = moment(result.date);
+			return (
+				<EventsListElement key={id} title={result.skiingType} place="Ne radi" date={updatedResult("dddd, MMMM Do YYYY, h:mm")} time={result.startTime}/>
+			)
+		});
+
 		return (
 			<div className="page events-list">
 				<div className="row">
-					<EventsListElement title="This is title" place="Place" time="Time" clock="12:00"/>
+					{allItems}
 				</div>
 			</div>
 		);

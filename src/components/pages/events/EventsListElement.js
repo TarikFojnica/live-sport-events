@@ -14,8 +14,8 @@ class EventsListElement extends React.Component {
 				<div className="events-list-element">
 					<h2>{this.props.title}</h2>
 					<p className="place"><img src={place} alt=""/>{this.props.place}</p>
-					<p className="time"><img src={calendar} alt=""/>{this.props.time}</p>
-					<p className="time"><img src={clock} alt=""/>{this.props.clock}</p>
+					<p className="time"><img src={calendar} alt=""/>{this.props.date}</p>
+					<p className="time"><img src={clock} alt=""/>{this.props.time}</p>
 					<Link className="btn" to="/events/1"><img src={LinkSymbol} alt="Link Symbol"/> Details</Link>
 				</div>
 			</div>
