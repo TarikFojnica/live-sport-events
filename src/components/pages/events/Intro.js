@@ -3,8 +3,10 @@
 import React, { Component } from 'react';
 import slalom from '../../../assets/images/slalom.svg';
 import place from '../../../assets/images/placeholder-on-map-paper-in-perspective.svg';
-import clock from '../../../assets/images/clock.svg'
-import calendar from '../../../assets/images/calendar.svg'
+import clock from '../../../assets/images/clock.svg';
+import calendar from '../../../assets/images/calendar.svg';
+import users from '../../../assets/images/multiple-users-silhouette.svg';
+import skiStick from '../../../assets/images/ski-stick.svg'
 
 class Intro extends Component  {
 	render() {
@@ -19,9 +21,9 @@ class Intro extends Component  {
 
 					<li><img className="icon" src={place} alt=""/>Place: <span>Bjelasnica, Lipsum 223</span></li>
 
-					<li><img className="icon" src={place} alt=""/>Number of Players: <span>{this.props.numOfPlayers}</span></li>
+					<li><img className="icon" src={users} alt=""/>Number of Players: <span>{this.props.numOfPlayers}</span></li>
 
-					<li><img className="icon" src={place} alt=""/>Track Length: <span>{this.props.trackLength}</span></li>
+					<li><img className="icon" src={skiStick} alt=""/>Track Length: <span>{this.props.trackLength}</span></li>
 				</ul>
 				<p className="desc">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat nulla sed diam tempor dapibus. Suspendisse vel magna sit amet odio tempus congue a non nibh

@@ -23,7 +23,6 @@ class CountDown extends React.Component {
 		return (
 			<div className="module count-down with-transparent-background">
 				<img src={sandClock} alt="Count Down"/>
-				<br/>
 				<div className="values">
 					<Countdown options={OPTIONS}/>
 				</div>

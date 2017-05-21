@@ -36,11 +36,12 @@ class Event extends React.Component {
 	};
 
 	render() {
+		console.log(this.state.data)
 		return (
 			<div className="page events">
 				<div className="row">
 					<div className="col-md-6">
-						<Intro title={this.state.data.skiingType} date={this.state.date} time={this.state.startTime} numOfPlayers={this.state.numberOfPlayers} trackLength={this.state.lenghtOfTrack}/>
+						<Intro title={this.state.data.skiingType} date={this.state.date} time={this.state.startTime} numOfPlayers={this.state.data.numberOfPlayers} trackLength={this.state.data.lenghtOfTrack}/>
 					</div>
 
 					<div className="col-md-6">
