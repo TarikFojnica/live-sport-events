@@ -6685,4 +6685,34 @@ table.table {
       margin-top: -2px;
       margin-right: 5px; }
 
+.teams-list-element {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  -o-transition: 1s;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-bottom: 15px; }
+  .teams-list-element:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+    .teams-list-element:hover a {
+      text-decoration: none !important; }
+  .teams-list-element h2 {
+    margin-top: 0;
+    color: whitesmoke;
+    font-size: 1.3em; }
+  .teams-list-element p {
+    color: whitesmoke;
+    font-size: 1.3em;
+    padding: 5px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    .teams-list-element p:last-child {
+      border-bottom: none; }
+    .teams-list-element p img {
+      width: 1em;
+      margin-top: -2px;
+      margin-right: 5px; }
+
 /*# sourceMappingURL=main.css.map */
