@@ -21,6 +21,8 @@
 	.header {
 		position: relative;
 		padding-right: 30px;
+		border-bottom: 1px solid rgba(255,255,255,.2);
+		margin-bottom: 10px;
 
 		img {
 			position: absolute;
@@ -44,7 +46,7 @@
 			}
 			
 			&.value {
-				color: #66e0ff;
+				color: #5BC0DE;
 				font-weight: 700;
 			}
 		}

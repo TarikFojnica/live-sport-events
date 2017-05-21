@@ -6704,7 +6704,9 @@ table.table {
     font-size: 1.3em; }
   .teams-list-element .header {
     position: relative;
-    padding-right: 30px; }
+    padding-right: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px; }
     .teams-list-element .header img {
       position: absolute;
       top: 0;
@@ -6720,7 +6722,7 @@ table.table {
       .teams-list-element ul li.key {
         color: white; }
       .teams-list-element ul li.value {
-        color: #66e0ff;
+        color: #5BC0DE;
         font-weight: 700; }
 
 /*# sourceMappingURL=main.css.map */
