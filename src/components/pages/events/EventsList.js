@@ -14,9 +14,6 @@ class EventsList extends React.Component {
 	};
 
 	componentDidMount() {
-		let date2 = moment('2017-05-22T00:00:00');
-		console.log(date2.format("dddd, MMMM Do YYYY, h:mm"));
-
 		let _this = this;
 		axios.get(server + 'event')
 			.then(function (response) {

@@ -10,19 +10,19 @@ class Intro extends Component  {
 	render() {
 		return (
 			<div className="intro with-transparent-background">
-				<div className="row">
-					<div className="col-sm-6">
-						<h1><img src={slalom} alt="Type"/> Slalom</h1>
-					</div>
+				<h1><img src={slalom} alt="Type"/> {this.props.title}</h1>
 
-					<div className="col-sm-6">
-						<ul>
-							<li><img className="icon" src={calendar} alt=""/>Date: <span>15.7.2017</span></li>
-							<li><img className="icon" src={clock} alt=""/>Time: <span>17:00</span></li>
-							<li><img className="icon" src={place} alt=""/>Place: <span>Bjelasnica, Lipsum 223</span></li>
-						</ul>
-					</div>
-				</div>
+				<ul>
+					<li><img className="icon" src={calendar} alt=""/>Date: <span>{this.props.date}</span></li>
+
+					<li><img className="icon" src={clock} alt=""/>Time: <span>{this.props.time}</span></li>
+
+					<li><img className="icon" src={place} alt=""/>Place: <span>Bjelasnica, Lipsum 223</span></li>
+
+					<li><img className="icon" src={place} alt=""/>Number of Players: <span>{this.props.numOfPlayers}</span></li>
+
+					<li><img className="icon" src={place} alt=""/>Track Length: <span>{this.props.trackLength}</span></li>
+				</ul>
 				<p className="desc">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat nulla sed diam tempor dapibus. Suspendisse vel magna sit amet odio tempus congue a non nibh
 				</p>
