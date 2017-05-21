@@ -7,6 +7,8 @@ import Table from './Table'
 
 class Event extends React.Component {
 
+
+
 	render() {
 		return (
 			<div className="page events">
