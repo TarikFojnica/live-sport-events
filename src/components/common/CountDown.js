@@ -1,15 +1,15 @@
 // Tarik Fojnica
 
 import React, { Component } from 'react';
-import Countdown from 'react-count-down'
-import sandClock from '../../assets/images/sand-clock.svg'
+import Countdown from 'react-count-down';
+import sandClock from '../../assets/images/sand-clock.svg';
+import GoogleMapReact from 'google-map-react';
 
 const cb = () => {
 	console.log('The event is in progress')
 };
 
 const OPTIONS = { endDate: '03/01/2018', prefix: '', cb};
-
 
 class CountDown extends React.Component {
 
@@ -26,6 +26,7 @@ class CountDown extends React.Component {
 				<div className="values">
 					<Countdown options={OPTIONS}/>
 				</div>
+
 			</div>
 		);
 	}

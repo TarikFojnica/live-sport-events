@@ -6,7 +6,7 @@ import place from '../../../assets/images/placeholder-on-map-paper-in-perspectiv
 import clock from '../../../assets/images/clock.svg';
 import calendar from '../../../assets/images/calendar.svg';
 import users from '../../../assets/images/multiple-users-silhouette.svg';
-import skiStick from '../../../assets/images/ski-stick.svg'
+import skiStick from '../../../assets/images/ski-stick.svg';
 
 class Intro extends Component  {
 	render() {
@@ -19,7 +19,7 @@ class Intro extends Component  {
 
 					<li><img className="icon" src={clock} alt=""/>Time: <span>{this.props.time}</span></li>
 
-					<li><img className="icon" src={place} alt=""/>Place: <span>Bjelasnica, Lipsum 223</span></li>
+					<li><img className="icon" src={place} alt=""/>Place: <span>{this.props.place}</span></li>
 
 					<li><img className="icon" src={users} alt=""/>Number of Players: <span>{this.props.numOfPlayers}</span></li>
 
