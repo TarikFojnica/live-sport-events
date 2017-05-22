@@ -51,11 +51,11 @@ class Event extends React.Component {
 						<CountDown/>
 						<div style={{width: '100%', height: '240px', marginTop: '20px'}}>
 							<GoogleMap />
-						</div>,
+						</div>
 					</div>
 				</div>
 
-				<Table data={this.state.data}/>
+				<Table data={this.state.fullData}/>
 			</div>
 		);
 	}
