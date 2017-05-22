@@ -3,8 +3,6 @@
 import React, { Component } from 'react';
 import Countdown from 'react-count-down';
 import sandClock from '../../assets/images/sand-clock.svg';
-import GoogleMapReact from 'google-map-react';
-
 const cb = () => {
 	console.log('The event is in progress')
 };
@@ -18,7 +16,7 @@ class CountDown extends React.Component {
 			console.log('expired callback')
 		}
 
-		const OPTIONS = { endDate: '05/25/2017', prefix: '', cb};
+		const OPTIONS = { endDate: this.props.date, prefix: '', cb};
 
 		return (
 			<div className="module count-down with-transparent-background">
