@@ -9,15 +9,10 @@ import moment from 'moment'
 import GoogleMapReact from 'google-map-react';
 const server = 'http://localhost:58524/api/event/';
 
-const AnyReactComponent = () => (
-	<div>
-	</div>
-);
-
 class SimpleMap extends React.Component {
 	static defaultProps = {
 		center: {lat: 43.7042, lng: 18.2567},
-		zoom: 13
+		zoom: 11
 	};
 
 	render() {
@@ -25,11 +20,8 @@ class SimpleMap extends React.Component {
 			<GoogleMapReact
 				defaultCenter={this.props.center}
 				defaultZoom={this.props.zoom}
+				apiKey="AIzaSyDbyoIziZv2hIQgP6bJNlMKotw1sKNMHzs"
 			>
-				<AnyReactComponent
-					lat={59.955413}
-					lng={30.337844}
-				/>
 			</GoogleMapReact>
 		);
 	}
