@@ -25,14 +25,14 @@ class Event extends React.Component {
 				console.log(response);
 				let initialDate = moment(response.data[0].date);
 				let preparedDate = initialDate.format("dddd, MMMM Do YYYY");
-				let preparedDateCountDown =  initialDate.format("dddd, MMMM Do YYYY");
-				console.log(preparedDateCountDown);
+				let preparedDateCountDown =  initialDate.format("MM/DD/YYYY");
+				console.log('countdown', preparedDateCountDown);
 
 
 				_this.setState({
 					fullData: response.data,
 					data: response.data[0],
-					initialDate: initialDate,
+					countDownDate: preparedDateCountDown,
 					date: preparedDate
 				});
 
@@ -51,7 +51,7 @@ class Event extends React.Component {
 					</div>
 
 					<div className="col-md-6">
-						<CountDown date={''}/>
+						<CountDown date={this.state.countDownDate}/>
 						<div style={{width: '100%', height: '240px', marginTop: '20px'}}>
 							<GoogleMap />
 						</div>
