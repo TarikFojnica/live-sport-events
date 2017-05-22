@@ -2,39 +2,23 @@
 
 import React, { Component } from 'react';
 import Intro from './Intro';
-import CountDown from '../../common/CountDown'
-import Table from './Table'
+import CountDown from '../../common/CountDown';
+import Table from './Table';
 import axios from 'axios';
-import moment from 'moment'
-import GoogleMapReact from 'google-map-react';
+import moment from 'moment';
+import GoogleMap from '../../common/GoogleMap';
 const server = 'http://localhost:58524/api/event/';
-
-class SimpleMap extends React.Component {
-	static defaultProps = {
-		center: {lat: 43.7042, lng: 18.2567},
-		zoom: 11
-	};
-
-	render() {
-		return (
-			<GoogleMapReact
-				defaultCenter={this.props.center}
-				defaultZoom={this.props.zoom}
-				apiKey="AIzaSyDbyoIziZv2hIQgP6bJNlMKotw1sKNMHzs"
-			>
-			</GoogleMapReact>
-		);
-	}
-}
 
 class Event extends React.Component {
 	state = {
 		id: this.props.location.pathname.replace('/events/', ''),
 		date: '',
+		fullData: [],
 		data: []
 	};
 
 	componentDidMount() {
+		console.log(this.state.id);
 		let _this = this;
 		axios.get(server + this.state.id)
 			.then(function (response) {
@@ -44,6 +28,7 @@ class Event extends React.Component {
 
 
 				_this.setState({
+					fullData: response.data,
 					data: response.data[0],
 					date: preparedDate
 				});
@@ -65,12 +50,12 @@ class Event extends React.Component {
 					<div className="col-md-6">
 						<CountDown/>
 						<div style={{width: '100%', height: '240px', marginTop: '20px'}}>
-							<SimpleMap/>
+							<GoogleMap />
 						</div>,
 					</div>
 				</div>
 
-				<Table/>
+				<Table data={this.state.data}/>
 			</div>
 		);
 	}

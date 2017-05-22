@@ -16,7 +16,7 @@ class EventsListElement extends React.Component {
 					<p className="place"><img src={place} alt=""/>{this.props.place}</p>
 					<p className="time"><img src={calendar} alt=""/>{this.props.date}</p>
 					<p className="time"><img src={clock} alt=""/>{this.props.time}</p>
-					<Link className="btn" to="/events/1"><img src={LinkSymbol} alt="Link Symbol"/> Details</Link>
+					<Link className="btn" to={`/events/${this.props.id}`}><img src={LinkSymbol} alt="Link Symbol"/> Details</Link>
 				</div>
 			</div>
 		);

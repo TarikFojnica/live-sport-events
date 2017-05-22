@@ -32,7 +32,7 @@ class EventsList extends React.Component {
 
 			dates[id] = moment(result.date);
 			return (
-				<EventsListElement key={id} title={result.skiingType} place={result.nameplace} date={dates[id].format("dddd, MMMM Do YYYY")} time={result.startTime}/>
+				<EventsListElement key={id} title={result.skiingType} place={result.nameplace} date={dates[id].format("dddd, MMMM Do YYYY")} time={result.startTime} id={result.EventID}/>
 			)
 		});
 
