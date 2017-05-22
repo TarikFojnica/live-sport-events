@@ -55,7 +55,6 @@ class Event extends React.Component {
 	};
 
 	render() {
-		console.log(this.state.data)
 		return (
 			<div className="page events">
 				<div className="row">

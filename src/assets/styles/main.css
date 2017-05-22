@@ -6667,7 +6667,8 @@ table.table {
       margin-top: -3px; }
   .events-list-element h2 {
     margin-top: 0;
-    color: whitesmoke; }
+    color: whitesmoke;
+    font-size: 1.4em; }
   .events-list-element p {
     color: whitesmoke;
     font-size: 1.3em;
@@ -6720,5 +6721,11 @@ table.table {
       .teams-list-element ul li.value {
         color: #5BC0DE;
         font-weight: 700; }
+
+.google-map-pin img {
+  width: 32px !important;
+  position: absolute;
+  top: 20% !important;
+  left: 20% !important; }
 
 /*# sourceMappingURL=main.css.map */

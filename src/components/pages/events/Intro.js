@@ -12,7 +12,7 @@ class Intro extends Component  {
 	render() {
 		return (
 			<div className="intro with-transparent-background">
-				<h1><img src={slalom} alt="Type"/> {this.props.title}</h1>
+				<h1><img src={slalom} alt="Type"/> {this.props.title} Skiing</h1>
 
 				<ul>
 					<li><img className="icon" src={calendar} alt=""/>Date: <span>{this.props.date}</span></li>
