@@ -4,8 +4,7 @@ import axios from 'axios';
 
 class SimpleMap extends React.Component {
 	state = {
-		map: {
-		}
+		map: {}
 	};
 
 	componentDidMount(){

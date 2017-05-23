@@ -25,7 +25,7 @@ class Table extends Component  {
 			return (
 				<tr key={id}>
 					<td>{id}</td>
-					<td>Nation</td>
+					<td>img</td>
 					<td>{`${result.name} ${result.surname}`}</td>
 					<td>{dates[id].format("YYYY")}</td>
 					<td>{result.birthplace}</td>
