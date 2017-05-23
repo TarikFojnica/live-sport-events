@@ -51,6 +51,8 @@ const LAST_NAMES = [
 
 const TIMES = [
 	60,
+	59,
+	58,
 	57,
 	56,
 	55,
@@ -59,16 +61,17 @@ const TIMES = [
 	52,
 	51,
 	50,
-	49,
-	48,
-	47,
-	46,
-	45,
-	44,
-	43,
-	42,
-	41,
-	40
+	60,
+	60,
+	59,
+	58,
+	57,
+	56,
+	55,
+	54,
+	53,
+	52,
+	51,
 ];
 
 function shuffleArray(array) {
@@ -88,34 +91,43 @@ class Dynamic extends Component  {
 		times: [],
 		activePlayerFirstName: '--',
 		activePlayerLastName: '--',
-		counter: -1
+		counter: -1,
+		activeTime: 0
 	};
+
+	updateLivePlayer(index) {
+		this.setState({
+			activePlayerFirstName: this.state.firstNames[index],
+			activePlayerLastName:  this.state.lastNames[index],
+			firstGate: this.state.times[index] / 2 - 10,
+			secondGate: this.state.times[index] / 2,
+			thirdGate: this.state.times[index] / 2 + 7 ,
+			fourthGate: this.state.times[index] / 2 + 12,
+			fifthGate: this.state.times[index],
+			activeTime: this.state.times[index]
+		});
+		console.log('for')
+	}
 
 	componentDidMount() {
 		this.setState({
 			firstNames: shuffleArray(FIRST_NAMES),
 			lastNames: 	shuffleArray(LAST_NAMES),
 			times: shuffleArray(TIMES),
+			activeTime: this.state.times[0]
 		});
 
-		let counter = -1;
+		setTimeout(() => {
+			this.updateLivePlayer(0)
+		}, 500);
+
+
+		let counter = 0;
 		setInterval(() => {
-			counter += 1;
-
-			this.setState({
-				activePlayerFirstName: this.state.firstNames[counter],
-				activePlayerLastName:  this.state.lastNames[counter],
-				firstGate: this.state.times[counter] / 2 - 10,
-				secondGate: this.state.times[counter] / 2,
-				thirdGate: this.state.times[counter] / 2 + 7 ,
-				fourthGate: this.state.times[counter] / 2 + 12,
-				fifthGate: this.state.times[counter],
-			});
-
-			console.log(counter)
-		}, 2000);
+			counter ++;
+			this.updateLivePlayer(counter)
+		}, 5000);
 	}
-
 
 	render() {
 		return (
