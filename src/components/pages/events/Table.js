@@ -2,14 +2,7 @@
 
 import React, { Component } from 'react';
 import moment from 'moment'
-import flagAustria from '../../../assets/images/flags/austria.svg'
-import flagCanada from '../../../assets/images/flags/canada.svg'
-import flagChina from '../../../assets/images/flags/china.svg'
-import flagGermany from '../../../assets/images/flags/germany.svg'
-import flagIndia from '../../../assets/images/flags/india.svg'
-import flagRussia from '../../../assets/images/flags/russia.svg'
-import flagUnitedKingdom from '../../../assets/images/flags/united-kingdom.svg'
-import flagUnitedStates from '../../../assets/images/flags/united-states.svg'
+import dataFlags from '../../../data'
 
 class Table extends Component  {
 	static defaultProps = {
@@ -25,7 +18,7 @@ class Table extends Component  {
 			return (
 				<tr className={id == 0 ? 'hidden' : ''} key={id}>
 					<td>{id}</td>
-					<td>img</td>
+					<td><img src={dataFlags[result.flag]} alt="Image"/></td>
 					<td>{`${result.name} ${result.surname}`}</td>
 				</tr>
 			)

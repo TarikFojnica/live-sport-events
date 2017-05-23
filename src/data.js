@@ -6,7 +6,11 @@ import ag from './assets/images/flags-svg/ag.svg';
 import ai from './assets/images/flags-svg/ai.svg';
 import al from './assets/images/flags-svg/al.svg';
 import bh from './assets/images/flags-svg/ba.svg';
+import fr from './assets/images/flags-svg/fr.svg';
+import gb from './assets/images/flags-svg/gb.svg';
+import sw from './assets/images/flags-svg/se.svg';
+import de from './assets/images/flags-svg/de.svg';
 
 export default {
-	ad, au, ae, af, ag, ai, al, bh
+	ad, au, ae, af, ag, ai, al, bh, fr, gb, sw, de
 }

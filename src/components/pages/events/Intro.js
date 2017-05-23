@@ -23,7 +23,7 @@ class Intro extends Component  {
 
 					<li><img className="icon" src={users} alt=""/>Number of Players: <span>{this.props.numOfPlayers}</span></li>
 
-					<li><img className="icon" src={skiStick} alt=""/>Track Length: <span>{this.props.trackLength}m</span></li>
+					<li><img className="icon" src={skiStick} alt=""/>Track Length: <span>500 m</span></li>
 				</ul>
 				<p className="desc">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat nulla sed diam tempor dapibus. Suspendisse vel magna sit amet odio tempus congue a non nibh
