@@ -23,15 +23,10 @@ class Table extends Component  {
 
 			dates[id] = moment(result.date);
 			return (
-				<tr key={id}>
+				<tr className={id == 0 ? 'hidden' : ''} key={id}>
 					<td>{id}</td>
 					<td>img</td>
 					<td>{`${result.name} ${result.surname}`}</td>
-					<td>{dates[id].format("YYYY")}</td>
-					<td>{result.birthplace}</td>
-					<td>{result.goldMedals}</td>
-					<td>{result.silverMedals}</td>
-					<td>{result.bronzeMedals}</td>
 				</tr>
 			)
 		});
@@ -42,12 +37,6 @@ class Table extends Component  {
 					<th>#</th>
 					<th>Nation</th>
 					<th>Name</th>
-					<th>Year</th>
-					<th>Birthplace</th>
-					<th>Gold Medals</th>
-					<th>Silver Medals</th>
-					<th>Bronze Medals</th>
-
 				</tr>
 				</thead>
 				<tbody>

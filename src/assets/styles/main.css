@@ -6533,6 +6533,8 @@ table.table {
   border: 1px solid rgba(91, 192, 222, 0.2);
   color: whitesmoke;
   margin-top: 15px; }
+  table.table tr.hidden {
+    display: none; }
   table.table tr th {
     border: none;
     padding: 10px;

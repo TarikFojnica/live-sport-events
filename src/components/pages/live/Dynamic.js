@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Stopwatch from '../../common/Stopwatch';
 import liveIcon from '../../../assets/images/circle.svg';
 import events from '../../../vendor/pub-sub';
+import axios from 'axios';
 
 const FIRST_NAMES =
 	[
@@ -129,6 +130,21 @@ class Dynamic extends Component  {
 			});
 
 			events.publish('NEW_PLAYER_STARTED', {});
+			let _this = this;
+
+			axios.post('http://localhost:58524/api/result/', {
+				firstName: 'Fred',
+				lastName: 'Flintstone',
+				country: 'bs',
+				time: this.state.activeTime,
+			})
+				.then(function (response) {
+					console.log(response);
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+
 			counter++;
 			this.updateLivePlayer(counter);
 		}, 50000);

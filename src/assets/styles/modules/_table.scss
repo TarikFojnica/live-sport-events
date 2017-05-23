@@ -5,6 +5,10 @@ table {
 		margin-top: 15px;
 
 		tr {
+			&.hidden {
+				display: none;
+			}
+
 			th {
 				border: none;
 				padding: 10px;
