@@ -6611,11 +6611,14 @@ table.table {
       color: whitesmoke;
       text-align: center;
       margin-top: 10px;
-      display: block; }
+      display: none;
+      font-size: 1.3em; }
     .dynamic-element .timeline .gate.waiting .inner {
       background-color: rgba(255, 255, 255, 0.2); }
     .dynamic-element .timeline .gate.finished .inner {
       background-color: white; }
+    .dynamic-element .timeline .gate.finished .time {
+      display: block; }
     .dynamic-element .timeline .gate.active .inner {
       background-color: #5BC0DE;
       animation: blinker 1s linear infinite; }

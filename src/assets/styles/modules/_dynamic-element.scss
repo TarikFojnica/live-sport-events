@@ -39,7 +39,8 @@
 				color: whitesmoke;
 				text-align: center;
 				margin-top: 10px;
-				display: block;
+				display: none;
+				font-size: 1.3em;
 			}
 			
 			&.waiting {
@@ -51,6 +52,10 @@
 			&.finished {
 				.inner {
 					background-color: white;
+				}
+
+				.time {
+					display: block;
 				}
 			}
 
