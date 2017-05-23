@@ -3,9 +3,13 @@
 import React, { Component } from 'react';
 import Navigation from './Navigation';
 import Dynamic from './Dynamic';
-import Standings from './Standings'
+import Standings from './Standings';
 
 class Live extends React.Component {
+	state = {
+		id: this.props.location.pathname.replace('/events/', ''),
+		players: []
+	};
 
 	render() {
 		return (
@@ -13,7 +17,7 @@ class Live extends React.Component {
 				<Navigation/>
 				<Dynamic/>
 
-				<Standings/>
+				<Standings id={this.state.id}/>
 			</div>
 		);
 	}
