@@ -8,26 +8,28 @@ import axios from 'axios';
 import moment from 'moment';
 import GoogleMap from '../../common/GoogleMap';
 const server = 'http://localhost:58524/api/event/';
+const mapServer = 'http://localhost:58524/api/place/';
+import GoogleMapReact from 'google-map-react';
 
 class Event extends React.Component {
 	state = {
 		id: this.props.location.pathname.replace('/events/', ''),
 		date: '',
 		fullData: [],
-		data: []
+		data: [],
+		mapData: {
+			lat: 0,
+			lng: 0
+		}
 	};
 
 	componentDidMount() {
-		console.log(this.state.id);
 		let _this = this;
 		axios.get(server + this.state.id)
 			.then(function (response) {
-				console.log(response);
 				let initialDate = moment(response.data[0].date);
 				let preparedDate = initialDate.format("dddd, MMMM Do YYYY");
 				let preparedDateCountDown =  initialDate.format("MM/DD/YYYY");
-				console.log('countdown', preparedDateCountDown);
-
 
 				_this.setState({
 					fullData: response.data,
@@ -36,6 +38,20 @@ class Event extends React.Component {
 					date: preparedDate
 				});
 
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
+
+		axios.get('http://localhost:58524/api/place/' +  this.state.id)
+			.then(function (response) {
+
+				_this.setState({
+					mapData: {
+						lat: response.data.latitude,
+						lng: response.data.longitude
+					}
+				});
 			})
 			.catch(function (error) {
 				console.log(error);
@@ -53,7 +69,7 @@ class Event extends React.Component {
 					<div className="col-md-6">
 						<CountDown date={this.state.countDownDate}/>
 						<div style={{width: '100%', height: '240px', marginTop: '20px'}}>
-							<GoogleMap />
+							<GoogleMap id={this.state.id} />
 						</div>
 					</div>
 				</div>

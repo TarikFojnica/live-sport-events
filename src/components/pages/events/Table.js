@@ -18,7 +18,6 @@ class Table extends Component  {
 
 	render() {
 		let dates = [];
-		console.log(this.props)
 
 		let  allItems = this.props.data.map((result, id) => {
 
