@@ -86,7 +86,9 @@ class Dynamic extends Component  {
 		firstNames: [],
 		lastNames: [],
 		times: [],
-		activePlayer: {}
+		activePlayerFirstName: '--',
+		activePlayerLastName: '--',
+		counter: -1
 	};
 
 	componentDidMount() {
@@ -95,48 +97,42 @@ class Dynamic extends Component  {
 			lastNames: 	shuffleArray(LAST_NAMES),
 			times: shuffleArray(TIMES),
 		});
-	}
 
-	render() {
 		let counter = -1;
-		setTimeout(() => {
-			counter++;
+		setInterval(() => {
+			counter += 1;
 
 			this.setState({
-				activePlayer: this.state.firstNames[counter] + this.state.lastNames[counter],
-				firstGate: this.state.times[counter] - 50,
-				secondGate: this.state.times[counter] - 40,
-				thirdGate: this.state.times[counter] - 28,
-				fourthGate: this.state.times[counter] - 18,
-				fifthGate: this.state.times[counter]
+				activePlayerFirstName: this.state.firstNames[counter],
+				activePlayerLastName:  this.state.lastNames[counter],
+				firstGate: this.state.times[counter] / 2 - 10,
+				secondGate: this.state.times[counter] / 2,
+				thirdGate: this.state.times[counter] / 2 + 7 ,
+				fourthGate: this.state.times[counter] / 2 + 12,
+				fifthGate: this.state.times[counter],
 			});
 
-			return(
-				<div>
-
-				</div>
-			)
+			console.log(counter)
+		}, 2000);
+	}
 
 
-		}, this.state.times[counter]);
-
+	render() {
 		return (
 			<div className="dynamic-element">
 				<span className="live-note"><img src={liveIcon} alt="Live Icon"/> Live Event</span>
 				<div className="row">
 					<div className="col-md-8">
 						<div className="current-player">
-							<h4>{this.state.firstNames[0]} {this.state.lastNames[0]}</h4>
+							<h4>{`${this.state.activePlayerFirstName} ${this.state.activePlayerLastName}`}</h4>
 						</div>
 
 						<div className="timeline">
-							<div className="timeline">
-								<div className="gate gate-1 finished"><div className="inner"></div><span className="time">00:00:59</span></div>
-								<div className="gate gate-2 finished"><div className="inner"></div><span className="time">00:00:23</span></div>
-								<div className="gate gate-3 active"><div className="inner"></div></div>
-								<div className="gate gate-4 waiting"><div className="inner"></div></div>
-								<div className="gate gate-5 waiting"><div className="inner"></div></div>
-							</div>
+							<div className="gate gate-1 finished"><div className="inner"></div><span className="time">00:00:{this.state.firstGate}</span></div>
+							<div className="gate gate-2 finished"><div className="inner"></div><span className="time">00:00:{this.state.secondGate}</span></div>
+							<div className="gate gate-3 active"><div className="inner"></div><span className="time">00:00:{this.state.thirdGate}</span></div>
+							<div className="gate gate-4 waiting"><div className="inner"></div><span className="time">00:00:{this.state.fourthGate}</span></div>
+							<div className="gate gate-5 waiting"><div className="inner"></div><span className="time">00:00:{this.state.fifthGate}</span></div>
 						</div>
 					</div>
 
