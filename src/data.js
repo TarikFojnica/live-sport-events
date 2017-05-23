@@ -10,7 +10,8 @@ import fr from './assets/images/flags-svg/fr.svg';
 import gb from './assets/images/flags-svg/gb.svg';
 import sw from './assets/images/flags-svg/se.svg';
 import de from './assets/images/flags-svg/de.svg';
+import hu from './assets/images/flags-svg/hu.svg'
 
 export default {
-	ad, au, ae, af, ag, ai, al, bh, fr, gb, sw, de
+	ad, au, ae, af, ag, ai, al, bh, fr, gb, sw, de, hu
 }

@@ -13,6 +13,7 @@ class Table extends Component  {
 		let dates = [];
 
 		let  allItems = this.props.data.map((result, id) => {
+			console.log(result)
 
 			dates[id] = moment(result.date);
 			return (
