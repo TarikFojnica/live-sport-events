@@ -2,14 +2,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import flagAustria from '../../../assets/images/flags/austria.svg'
-import flagCanada from '../../../assets/images/flags/canada.svg'
-import flagChina from '../../../assets/images/flags/china.svg'
-import flagGermany from '../../../assets/images/flags/germany.svg'
-import flagIndia from '../../../assets/images/flags/india.svg'
-import flagRussia from '../../../assets/images/flags/russia.svg'
-import flagUnitedKingdom from '../../../assets/images/flags/united-kingdom.svg'
-import flagUnitedStates from '../../../assets/images/flags/united-states.svg'
+import dataFlags from '../../../data'
 
 class StandingsTable extends Component  {
 
@@ -37,9 +30,9 @@ class StandingsTable extends Component  {
 			console.log(result);
 			return (
 				<tr key={id}>
-					<td>{id}</td>
-					<td>{result.flag}</td>
-					<td>{result.name}</td>
+					<td>{id + 1}</td>
+					<td><img src={dataFlags[result.flag]} alt=""/></td>
+					<td>{`${result.name} ${result.surname}`}</td>
 					<td>{result.time}</td>
 				</tr>
 			)

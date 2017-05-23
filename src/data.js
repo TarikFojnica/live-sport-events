@@ -5,7 +5,8 @@ import af from './assets/images/flags-svg/af.svg';
 import ag from './assets/images/flags-svg/ag.svg';
 import ai from './assets/images/flags-svg/ai.svg';
 import al from './assets/images/flags-svg/al.svg';
+import bh from './assets/images/flags-svg/ba.svg';
 
 export default {
-	ad, au, ae, af, ag, ai, al
+	ad, au, ae, af, ag, ai, al, bh
 }
