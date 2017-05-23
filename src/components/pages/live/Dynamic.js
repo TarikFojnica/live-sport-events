@@ -136,9 +136,11 @@ class Dynamic extends Component  {
 
 			events.publish('NEW_PLAYER_STARTED', {
 				newPlayer: {
-					firstName: this.state.activePlayerFirstName,
-					lastName:  this.state.activePlayerLastName,
-					country: this.state.activePlayerCountry
+					playerNumber: 5,
+					time:  '00:00:' + this.state.activeTime,
+					name: this.state.activePlayerFirstName,
+					surname: this.state.activePlayerLastName,
+					flag: this.state.activePlayerCountry
 				}
 			});
 			counter++;

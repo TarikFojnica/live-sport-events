@@ -8,7 +8,7 @@ class StandingsTable extends Component  {
 
 	state = {
 		data: []
-	}
+	};
 
 	componentDidMount() {
 		let _this = this;
@@ -25,13 +25,16 @@ class StandingsTable extends Component  {
 			});
 
 		events.subscribe('NEW_PLAYER_STARTED', function(obj) {
-			console.log(obj);
+			console.log(obj.newPlayer);
+			_this.setState({
+				data: [..._this.state.data, obj.newPlayer]
+			})
+
 		});
 	}
 
 	render() {
 		let  allItems = this.state.data.map((result, id) => {
-			console.log(result);
 			return (
 				<tr key={id}>
 					<td>{id + 1}</td>
