@@ -11,6 +11,11 @@ import flagUnitedKingdom from '../../../assets/images/flags/united-kingdom.svg'
 import flagUnitedStates from '../../../assets/images/flags/united-states.svg'
 
 class StandingsTable extends Component  {
+
+	componentDidMount() {
+
+	}
+
 	render() {
 		return (
 			<div className="standings-table">

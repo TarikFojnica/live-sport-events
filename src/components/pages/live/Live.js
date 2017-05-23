@@ -12,6 +12,7 @@ class Live extends React.Component {
 			<div className="page live">
 				<Navigation/>
 				<Dynamic/>
+
 				<Standings/>
 			</div>
 		);
