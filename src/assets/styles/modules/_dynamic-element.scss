@@ -56,7 +56,7 @@
 
 			&.active {
 				.inner {
-					background-color: $color-blue-light-1;
+					background-color: $color-blue-light-1 ;
 					animation: blinker 1s linear infinite;
 				}
 			}

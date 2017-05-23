@@ -93,7 +93,7 @@ class Dynamic extends Component  {
 		activePlayerFirstName: '--',
 		activePlayerLastName: '--',
 		counter: -1,
-		activeTime: 0
+		countingSeconds: 1
 	};
 
 	updateLivePlayer(index) {
@@ -107,28 +107,38 @@ class Dynamic extends Component  {
 			fifthGate: this.state.times[index],
 			activeTime: this.state.times[index]
 		});
-		console.log('for')
 	}
 
 	componentDidMount() {
 		this.setState({
 			firstNames: shuffleArray(FIRST_NAMES),
-			lastNames: 	shuffleArray(LAST_NAMES),
+			lastNames: shuffleArray(LAST_NAMES),
 			times: shuffleArray(TIMES),
 			activeTime: this.state.times[0]
 		});
 
 		setTimeout(() => {
 			this.updateLivePlayer(0)
-		}, 500);
+		}, 100);
 
 
 		let counter = 0;
 		setInterval(() => {
+			this.setState({
+				countingSeconds: 0
+			});
+
 			events.publish('NEW_PLAYER_STARTED', {});
-			counter ++;
-			this.updateLivePlayer(counter)
-		}, 5000);
+			counter++;
+			this.updateLivePlayer(counter);
+		}, 50000);
+
+
+		setInterval(() => {
+			this.setState({
+				countingSeconds: this.state.countingSeconds += 1
+			});
+		}, 1000);
 	}
 
 	render() {
@@ -142,11 +152,27 @@ class Dynamic extends Component  {
 						</div>
 
 						<div className="timeline">
-							<div className="gate gate-1 finished"><div className="inner"></div><span className="time">00:00:{this.state.firstGate}</span></div>
-							<div className="gate gate-2 finished"><div className="inner"></div><span className="time">00:00:{this.state.secondGate}</span></div>
-							<div className="gate gate-3 active"><div className="inner"></div><span className="time">00:00:{this.state.thirdGate}</span></div>
-							<div className="gate gate-4 waiting"><div className="inner"></div><span className="time">00:00:{this.state.fourthGate}</span></div>
-							<div className="gate gate-5 waiting"><div className="inner"></div><span className="time">00:00:{this.state.fifthGate}</span></div>
+							<div
+								className={`gate ${this.state.countingSeconds < this.state.firstGate ? 'active'
+									: 'finished'}`}
+							><div className="inner"></div><span className="time">00:00:{this.state.firstGate}</span></div>
+
+							<div className={`gate ${this.state.countingSeconds >= this.state.firstGate && this.state.countingSeconds < this.state.secondGate ? 'active'
+								: this.state.countingSeconds > this.state.secondGate ? 'finished'
+									: 'waiting' }`}>
+								<div className="inner"></div><span className="time">00:00:{this.state.secondGate}</span></div>
+
+							<div className={`gate ${this.state.countingSeconds >= this.state.secondGate && this.state.countingSeconds < this.state.thirdGate ? 'active'
+								: this.state.countingSeconds > this.state.thirdGate ? 'finished'
+									: 'waiting' }`}><div className="inner"></div><span className="time">00:00:{this.state.thirdGate}</span></div>
+
+							<div className={`gate ${this.state.countingSeconds >= this.state.thirdGate && this.state.countingSeconds < this.state.fourthGate ? 'active'
+								: this.state.countingSeconds > this.state.fourthGate ? 'finished'
+									: 'waiting' }`}><div className="inner"></div><span className="time">00:00:{this.state.fourthGate}</span></div>
+
+							<div className={`gate ${this.state.countingSeconds >= this.state.fourthGate && this.state.countingSeconds < this.state.fifthGate ? 'active'
+								: this.state.countingSeconds > this.state.fifthGate ? 'finished'
+									: 'waiting' }`}><div className="inner"></div><span className="time">00:00:{this.state.fifthGate}</span></div>
 						</div>
 					</div>
 
