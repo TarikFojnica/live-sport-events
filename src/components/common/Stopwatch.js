@@ -1,6 +1,7 @@
 // Tarik Fojnica
 
 import React, { Component } from 'react';
+import events from '../../vendor/pub-sub';
 
 const leftPad = (width, n) => {
 	if ((n + '').length > width) {
@@ -38,6 +39,7 @@ class Stopwatch extends React.Component {
 		clearInterval(this.timer);
 		this.setState(this.initialState);
 	}
+
 	startTimer() {
 		if (this.refs.stopwatchRef) {
 			this.startTime = Date.now();
@@ -52,6 +54,12 @@ class Stopwatch extends React.Component {
 
 	componentDidMount() {
 		this.startTimer();
+
+		let _this = this;
+		events.subscribe('NEW_PLAYER_STARTED', function(obj) {
+			_this.reset();
+			_this.startTimer();
+		});
 	}
 
 	componentWillUnmount() {

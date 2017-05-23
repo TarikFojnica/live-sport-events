@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import Stopwatch from '../../common/Stopwatch';
 import liveIcon from '../../../assets/images/circle.svg';
+import events from '../../../vendor/pub-sub';
 
 const FIRST_NAMES =
 	[
@@ -124,6 +125,7 @@ class Dynamic extends Component  {
 
 		let counter = 0;
 		setInterval(() => {
+			events.publish('NEW_PLAYER_STARTED', {});
 			counter ++;
 			this.updateLivePlayer(counter)
 		}, 5000);
