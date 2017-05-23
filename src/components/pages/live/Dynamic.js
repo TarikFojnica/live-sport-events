@@ -76,6 +76,8 @@ const TIMES = [
 	51,
 ];
 
+const COUNTRIES = [	'ad', 'au', 'ae', 'af', 'ag', 'ai', 'al', 'bh', 'fr', 'gb', 'sw', 'de', 'al', 'bh', 'fr', 'gb', 'sw', 'de'];
+
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
 		let j = Math.floor(Math.random() * (i + 1));
@@ -91,6 +93,7 @@ class Dynamic extends Component  {
 		firstNames: [],
 		lastNames: [],
 		times: [],
+		countries: [],
 		activePlayerFirstName: '--',
 		activePlayerLastName: '--',
 		counter: -1,
@@ -101,6 +104,7 @@ class Dynamic extends Component  {
 		this.setState({
 			activePlayerFirstName: this.state.firstNames[index],
 			activePlayerLastName:  this.state.lastNames[index],
+			activePlayerCountry: this.state.countries[index],
 			firstGate: this.state.times[index] / 2 - 10,
 			secondGate: this.state.times[index] / 2,
 			thirdGate: this.state.times[index] / 2 + 7 ,
@@ -115,6 +119,7 @@ class Dynamic extends Component  {
 			firstNames: shuffleArray(FIRST_NAMES),
 			lastNames: shuffleArray(LAST_NAMES),
 			times: shuffleArray(TIMES),
+			countries: shuffleArray(COUNTRIES),
 			activeTime: this.state.times[0]
 		});
 
@@ -129,22 +134,13 @@ class Dynamic extends Component  {
 				countingSeconds: 0
 			});
 
-			events.publish('NEW_PLAYER_STARTED', {});
-			let _this = this;
-
-			axios.post('http://localhost:58524/api/result/', {
-				firstName: 'Fred',
-				lastName: 'Flintstone',
-				country: 'bs',
-				time: this.state.activeTime,
-			})
-				.then(function (response) {
-					console.log(response);
-				})
-				.catch(function (error) {
-					console.log(error);
-				});
-
+			events.publish('NEW_PLAYER_STARTED', {
+				newPlayer: {
+					firstName: this.state.activePlayerFirstName,
+					lastName:  this.state.activePlayerLastName,
+					country: this.state.activePlayerCountry
+				}
+			});
 			counter++;
 			this.updateLivePlayer(counter);
 		}, 50000);

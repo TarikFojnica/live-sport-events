@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import dataFlags from '../../../data'
-
+import events from '../../../vendor/pub-sub';
 class StandingsTable extends Component  {
 
 	state = {
@@ -23,6 +23,10 @@ class StandingsTable extends Component  {
 			.catch(function (error) {
 				console.log(error);
 			});
+
+		events.subscribe('NEW_PLAYER_STARTED', function(obj) {
+			console.log(obj);
+		});
 	}
 
 	render() {
