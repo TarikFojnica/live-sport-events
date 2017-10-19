@@ -4,10 +4,29 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import dataFlags from '../../../data'
 import events from '../../../vendor/pub-sub';
+
 class StandingsTable extends Component  {
 
 	state = {
-		data: []
+		data: [
+			{
+				name: 'Kjetil Andre',
+				surname: 'Aamodt',
+				flag: 'sw'
+			},
+
+			{
+				name: 'Jean-Claude',
+				surname: 'Killy',
+				flag: 'fr'
+			},
+
+			{
+				name: 'Toni',
+				surname: 'Sailer',
+				flag: 'au'
+			},
+		]
 	};
 
 	componentDidMount() {

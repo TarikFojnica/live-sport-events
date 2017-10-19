@@ -76,7 +76,7 @@ const TIMES = [
 	51,
 ];
 
-const COUNTRIES = [	'ad', 'au', 'ae', 'af', 'ag', 'ai', 'al', 'bh', 'fr', 'gb', 'sw', 'de', 'al', 'bh', 'fr', 'gb', 'sw', 'de'];
+const COUNTRIES = [	'ad', 'au', 'ae', 'af', 'ag', 'ai', 'al', 'fr', 'gb', 'sw', 'de', 'al', 'bh', 'fr', 'gb', 'sw', 'de'];
 
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
