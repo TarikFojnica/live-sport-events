@@ -17,7 +17,7 @@ class Table extends Component  {
 
 			dates[id] = moment(result.date);
 			return (
-				<tr className={id == 0 ? 'hidden' : ''} key={id}>
+				<tr className={id === 0 ? 'hidden' : ''} key={id}>
 					<td>{id}</td>
 					<td><img src={dataFlags[result.flag]} alt="Image"/></td>
 					<td>{`${result.name} ${result.surname}`}</td>
