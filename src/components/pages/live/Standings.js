@@ -12,19 +12,29 @@ class StandingsTable extends Component  {
 			{
 				name: 'Kjetil Andre',
 				surname: 'Aamodt',
-				flag: 'sw'
+				flag: 'sw',
+				time: '00:00:46'
 			},
 
 			{
 				name: 'Jean-Claude',
 				surname: 'Killy',
-				flag: 'fr'
+				flag: 'fr',
+				time: '00:00:47'
+			},
+
+			{
+				name: 'Bernard',
+				surname: 'Russi',
+				flag: 'sw',
+				time: '00:00:47'
 			},
 
 			{
 				name: 'Toni',
 				surname: 'Sailer',
-				flag: 'au'
+				flag: 'au',
+				time: '00:00:48'
 			},
 		]
 	};
@@ -32,19 +42,11 @@ class StandingsTable extends Component  {
 	componentDidMount() {
 		let _this = this;
 
-		axios.get('http://localhost:58524/api/result/1')
-			.then(function (response) {
-				console.log(response);
-				_this.setState({
-					data: response.data
-				});
-			})
-			.catch(function (error) {
-				console.log(error);
-			});
-
+		// This event will fire every time a new player
+		// starts his skiing session
 		events.subscribe('NEW_PLAYER_STARTED', function(obj) {
 			console.log(obj.newPlayer);
+
 			_this.setState({
 				data: [..._this.state.data, obj.newPlayer]
 			})
