@@ -11,6 +11,87 @@ const server = 'http://localhost:58524/api/event/';
 const mapServer = 'http://localhost:58524/api/place/';
 import GoogleMapReact from 'google-map-react';
 
+const hardcodedData = [
+	{
+		skiingType: 'Alpine skiing',
+		placeName: 'Bjelasnica',
+		startTime: '20:00',
+		date: '08/22/2018 06:30',
+		EventID: 1
+	},
+
+	{
+		skiingType: 'Curling',
+		placeName: 'Bjelasnica',
+		startTime: '15:00',
+		date: '08/22/2018 06:30',
+		EventID: 2
+	},
+
+	{
+		skiingType: 'Ice hockey',
+		placeName: 'Skenderija',
+		startTime: '20:00',
+		date: '08/22/2018 06:30',
+		EventID: 3
+	},
+
+	{
+		skiingType: 'Ski jumping',
+		placeName: 'Jahorina',
+		startTime: '20:00',
+		date: '08/22/2018 06:30',
+		EventID: 4
+	},
+
+	{
+		skiingType: 'Snowboarding',
+		placeName: 'Jahorina',
+		startTime: '20:00',
+		date: '08/22/2018 06:30',
+		EventID: 5
+	},
+
+	{
+		skiingType: 'Freestyle skiing',
+		placeName: 'Igman',
+		startTime: '20:00',
+		date: '08/22/2018 06:30',
+		EventID: 6
+	},
+
+	{
+		skiingType: 'Snowboarding',
+		placeName: 'Jahorina',
+		startTime: '20:00',
+		date: '08/22/2018 06:30',
+		EventID: 7
+	},
+
+	{
+		skiingType: 'Freestyle skiing',
+		placeName: 'Igman',
+		startTime: '20:00',
+		date: '08/22/2018 06:30',
+		EventID: 8
+	},
+
+	{
+		skiingType: 'Freestyle skiing',
+		placeName: 'Igman',
+		startTime: '20:00',
+		date: '08/22/2018 06:30',
+		EventID: 6
+	},
+];
+const hardcodedUsers = [
+	{
+		flag: 'us',
+		name: 'Tarik',
+		surname: 'Fojnica'
+	}
+];
+
 
 class Event extends React.Component {
 	state = {
@@ -26,37 +107,17 @@ class Event extends React.Component {
 
 	componentDidMount() {
 		let _this = this;
-		axios.get(server + this.state.id)
-			.then(function (response) {
-				let initialDate = moment(response.data[0].date);
-				let preparedDate = initialDate.format("dddd, MMMM Do YYYY");
-				let preparedDateCountDown =  initialDate.format("MM/DD/YYYY");
+		console.log(this.state.id);
 
-				_this.setState({
-					fullData: response.data,
-					data: response.data[0],
-					countDownDate: preparedDateCountDown,
-					date: preparedDate
-				});
+		let initialDate = moment(hardcodedData[this.state.id].date);
+		let preparedDate = initialDate.format("MM/dd/yyyy HH:mm");
+		let preparedDateCountDown =  initialDate.format("MM/DD/YYYY");
 
-			})
-			.catch(function (error) {
-				console.log(error);
-			});
-
-		axios.get('http://localhost:58524/api/place/' +  this.state.id)
-			.then(function (response) {
-
-				_this.setState({
-					mapData: {
-						lat: response.data.latitude,
-						lng: response.data.longitude
-					}
-				});
-			})
-			.catch(function (error) {
-				console.log(error);
-			});
+		_this.setState({
+			data: hardcodedData[this.state.id],
+			countDownDate: preparedDateCountDown,
+			date: preparedDate
+		});
 	};
 
 	render() {
@@ -75,7 +136,7 @@ class Event extends React.Component {
 					</div>
 				</div>
 
-				<Table data={this.state.fullData}/>
+				<Table data={hardcodedUsers}/>
 			</div>
 		);
 	}
