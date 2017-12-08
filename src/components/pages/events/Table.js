@@ -4,15 +4,85 @@ import React, { Component } from 'react';
 import moment from 'moment'
 import dataFlags from '../../../data'
 
-class Table extends Component  {
-	static defaultProps = {
-		data: []
-	};
+const hardcodedData = [
+	{
+		name: 'Bode',
+		surname: 'Miller',
+		flag: 'ba'
+	},
 
+	{
+		name: 'Bode',
+		surname: 'Miller',
+		flag: 'sw'
+	},
+
+	{
+		name: 'Kjetil Andre',
+		surname: 'Aamodt',
+		flag: 'au'
+	},
+
+	{
+		name: 'Jean-Claude',
+		surname: 'Killy',
+		flag: 'fr'
+	},
+
+	{
+		name: 'Toni ',
+		surname: 'Sailer',
+		flag: 'au'
+	},
+
+	{
+		name: 'Alberto',
+		surname: 'Tomba',
+		flag: 'au'
+	},
+
+	{
+		name: 'Ingemar',
+		surname: 'Stenmark',
+		flag: 'sw'
+	},
+
+	{
+		name: 'Hermann',
+		surname: 'Maier',
+		flag: 'au'
+	},
+
+	{
+		name: 'Lasse',
+		surname: 'Kjus ',
+		flag: 'no'
+	},
+
+	{
+		name: 'Bernard',
+		surname: 'Russi',
+		flag: 'au'
+	},
+	{
+		name: 'Franz',
+		surname: 'Klammer',
+		flag: 'au'
+	},
+
+	{
+		name: 'Pirmin',
+		surname: 'Zurbriggen',
+		flag: 'au'
+	},
+
+];
+
+class Table extends Component  {
 	render() {
 		let dates = [];
 
-		let  allItems = this.props.data.map((result, id) => {
+		let  allItems = hardcodedData.map((result, id) => {
 			console.log(result);
 
 			dates[id] = moment(result.date);
