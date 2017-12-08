@@ -11,6 +11,7 @@ const server = 'http://localhost:58524/api/event/';
 const mapServer = 'http://localhost:58524/api/place/';
 import GoogleMapReact from 'google-map-react';
 
+
 class Event extends React.Component {
 	state = {
 		id: this.props.location.pathname.replace('/events/', ''),
@@ -18,8 +19,8 @@ class Event extends React.Component {
 		fullData: [],
 		data: [],
 		mapData: {
-			lat: 0,
-			lng: 0
+			lat: 43.8544,
+			lng: 18.4146
 		}
 	};
 
@@ -69,7 +70,7 @@ class Event extends React.Component {
 					<div className="col-md-6">
 						<CountDown date={this.state.countDownDate}/>
 						<div style={{width: '100%', height: '240px', marginTop: '20px'}}>
-							<GoogleMap id={this.state.id} />
+							<GoogleMap lat={this.state.mapData.lat} lng={this.state.mapData.lng} />
 						</div>
 					</div>
 				</div>
