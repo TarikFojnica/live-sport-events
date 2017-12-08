@@ -11,6 +11,14 @@
 				width: 20%;
 				float: right;
 				text-align: center;
+
+				&.unavailable {
+					a {
+						&:hover {
+							cursor:not-allowed;
+						}
+					}
+				}
 				
 				&.active {
 					z-index: 999;

@@ -6556,6 +6556,8 @@ table.table {
     width: 20%;
     float: right;
     text-align: center; }
+    .live-navigation nav ul li.unavailable a:hover {
+      cursor: not-allowed; }
     .live-navigation nav ul li.active {
       z-index: 999; }
       .live-navigation nav ul li.active a {

@@ -9,19 +9,19 @@ class Navigation extends Component  {
 			<div className="live-navigation">
 				<nav>
 					<ul className="clearfix">
-						<li>
+						<li className="unavailable">
 							<a href="#">Ice hockey</a>
 						</li>
 
-						<li>
+						<li className="unavailable">
 							<a href="#">Ski jumping</a>
 						</li>
 
-						<li>
+						<li className="unavailable">
 							<a href="#">Curling</a>
 						</li>
 
-						<li>
+						<li className="unavailable">
 							<a href="#">Snowboarding</a>
 						</li>
 
