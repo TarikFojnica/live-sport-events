@@ -107,14 +107,13 @@ class Event extends React.Component {
 
 	componentDidMount() {
 		let _this = this;
-		console.log(this.state.id);
 
-		let initialDate = moment(hardcodedData[this.state.id].date);
+		let initialDate = moment(hardcodedData[this.state.id - 1].date);
 		let preparedDate = initialDate.format("MM/dd/yyyy HH:mm");
 		let preparedDateCountDown =  initialDate.format("MM/DD/YYYY");
 
 		_this.setState({
-			data: hardcodedData[this.state.id],
+			data: hardcodedData[this.state.id - 1],
 			countDownDate: preparedDateCountDown,
 			date: preparedDate,
 			visibleDate: preparedDateCountDown
