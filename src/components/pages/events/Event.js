@@ -116,7 +116,8 @@ class Event extends React.Component {
 		_this.setState({
 			data: hardcodedData[this.state.id],
 			countDownDate: preparedDateCountDown,
-			date: preparedDate
+			date: preparedDate,
+			visibleDate: preparedDateCountDown
 		});
 	};
 
@@ -125,7 +126,7 @@ class Event extends React.Component {
 			<div className="page events">
 				<div className="row">
 					<div className="col-md-6">
-						<Intro title={this.state.data.skiingType} place={this.state.data.placeName} date={this.state.date} time={this.state.data.startTime} numOfPlayers={this.state.data.numberOfPlayers} trackLength={this.state.data.lenghtOfTrack}/>
+						<Intro title={this.state.data.skiingType} place={this.state.data.placeName} date={this.state.visibleDate} time={this.state.data.startTime} numOfPlayers={this.state.data.numberOfPlayers} trackLength={this.state.data.lenghtOfTrack}/>
 					</div>
 
 					<div className="col-md-6">

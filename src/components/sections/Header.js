@@ -21,10 +21,6 @@ class Header extends Component  {
 							<li>
 								<Link to="/events/">Events</Link>
 							</li>
-
-							<li>
-								<Link to="/teams">Teams</Link>
-							</li>
 						</ul>
 					</div>
 				</nav>
