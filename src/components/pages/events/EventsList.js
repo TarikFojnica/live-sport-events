@@ -63,6 +63,13 @@ const hardcodedData = [
 		startTime: '20:00',
 		EventID: 8
 	},
+
+	{
+		skiingType: 'Freestyle skiing',
+		placeName: 'Igman',
+		startTime: '20:00',
+		EventID: 6
+	},
 ]
 
 class EventsList extends React.Component {

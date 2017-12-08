@@ -10,7 +10,7 @@ import calendar from '../../../assets/images/calendar.svg'
 class EventsListElement extends React.Component {
 	render() {
 		return (
-			<div className="col-md-6">
+			<div className="col-md-4">
 				<div className="events-list-element">
 					<h2>{this.props.title}</h2>
 					<p className="place"><img src={place} alt=""/>{this.props.place}</p>
